@@ -97,7 +97,7 @@ public class Variables {
     float litFloat = 25.5f;
 
     //Шестнадцатеричные литералы с плавающей точкой - обозначением Р или р вместо Е или е.
-    double litDoubleHex = 0x12.1p0;// 18.125*2^3
+    double litDoubleHex = 0x12.1p0;// 18.125*2^0
 
     //При компиляции символы подчеркивания игнорируются.
     double litDoubleUnderline = 9_423_497.1_0_9;
