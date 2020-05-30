@@ -129,4 +129,39 @@ public class Variables {
 
     String litString = "\"This is in quotes\""; //строковый литерал
 
+
+
+    /*--------------------------------------------------*/
+    /*                ОБЛАСТЬ ВИДИМОСТИ                 */
+    /*--------------------------------------------------*/
+
+    private static String TEXT = "The end."; //5. Статические переменные классов существуют все время работы программы. Их видимость также определяется модификаторами доступа.
+
+    public static void  arguments (String[] args) //3. Переменные — аргументы метода — существуют везде внутри метода.
+    {
+        System.out.println("Hi");
+
+        String s = "Hi!"; //1. Переменная, объявленная в методе, существует/видна с начала объявления до конца метода.
+        System.out.println(s);
+
+        if(null != args)
+        {
+            String s2 = s; //2. Переменная, объявленная в блоке кода, существует до конца этого блока кода.
+            System.out.println(s2);
+        }
+
+        Variables variables = new Variables();
+        System.out.println(variables.classVariables);
+        System.out.println(TEXT);
+
+    }
+
+    public String classVariables; //4. Переменные класса/объекта существуют все время жизни содержащего их объекта. Их видимость дополнительно регулируется специальными модификаторами доступа: public, private.
+
+    public Variables()
+    {
+        classVariables = "Class Variables test.";
+    }
+
+    
 }
