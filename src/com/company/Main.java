@@ -10,16 +10,18 @@ public class Main {
         /*---Целые числа---*/
         System.out.println("Целые числа:");
 
-        Variables num = new Variables();
-        System.out.println("Значение целочисленной переменной по умолчанию = " + num.num0);
+            Variables num = new Variables();//создаем обект типа Variables, для того чтобы мы могли обращаться к полям объекта
+        {
+            System.out.println("Значение целочисленной переменной по умолчанию = " + num.num0);
 
-        int number = 0;
+            int number = 0;
 
-        number++;
-        number = number + 1;
-        number += 1;
+            number++;
+            number = number + 1;
+            number += 1;
 
-        System.out.println("number++, number = number + 1, number += 1 => " + number);
+            System.out.println("number++, number = number + 1, number += 1 => " + number);
+        }
 
         System.out.println("/------------------------/"); System.out.println();
         //-----------------//
@@ -27,30 +29,33 @@ public class Main {
         /*---Числа с плавающей точкой---*/
         System.out.println("Числа с плавающей точкой:");
 
-        double pi, r, аrea;
-        r = 10.8; // радиус окружности
-        pi = 3.1416; // приблизительное значение числа пи
-        аrea = pi * r * r; // вычислить площадь круга
-        System.out.println("Плoщaдь круга равна " + аrea);
+        {
+            double pi, r, аrea;
+            r = 10.8; // радиус окружности
+            pi = 3.1416; // приблизительное значение числа пи
+            аrea = pi * r * r; // вычислить площадь круга
+            System.out.println("Плoщaдь круга равна " + аrea);
+        }
 
-
-                System.out.println("/------------------------/"); System.out.println();
+        System.out.println("/------------------------/"); System.out.println();
         //------------------------------//
 
         /*---Символы---*/
         System.out.println("Символы:");
 
-        char chl, ch2;
+        {
+            char chl, ch2;
 
-        chl = 88; // код символа X
-        ch2 = 'Y';
+            chl = 88; // код символа X
+            ch2 = 'Y';
 
-        System.out.println("chl и ch2: " + chl + " " + ch2);
+            System.out.println("chl и ch2: " + chl + " " + ch2);
 
-        chl = 'x';
-        System.out.println("chl содержит " + chl);
-        chl++; //увеличить на единицу значение переменной chl
-        System.out.println("chl теперь содержит " + chl);
+            chl = 'x';
+            System.out.println("chl содержит " + chl);
+            chl++; //увеличить на единицу значение переменной chl
+            System.out.println("chl теперь содержит " + chl);
+        }
 
         System.out.println("/------------------------/"); System.out.println();
         //-------------//
@@ -58,22 +63,24 @@ public class Main {
         /*---Логические значения---*/
         System.out.println("Логические значения:");
 
-        boolean b;
+        {
+            boolean b;
 
-        b = false;
-        System.out.println("b равно " + b);
+            b = false;
+            System.out.println("b равно " + b);
 
-        b = true;
-        System.out.println("b равно " + b);
+            b = true;
+            System.out.println("b равно " + b);
 
-        //значение типа boolean может управлять оператором if
-        if(b) System.out.println("Этoт код выполняется.");
+            //значение типа boolean может управлять оператором if
+            if (b) System.out.println("Этoт код выполняется.");
 
-        b = false;
-        if(b) System.out.println("Этoт код не выполняется.");
+            b = false;
+            if (b) System.out.println("Этoт код не выполняется.");
 
-        //результат сравнения - значение типа boolean
-        System.out.println("10 > 9 равно " + (10 > 9) );
+            //результат сравнения - значение типа boolean
+            System.out.println("10 > 9 равно " + (10 > 9));
+        }
 
         System.out.println("/------------------------/"); System.out.println();
         //-------------------------//
@@ -83,19 +90,21 @@ public class Main {
         /*---Целочисленные литералы---*/
         System.out.println("Целочисленные литералы:");
 
-        System.out.println("максимальное значение по типу long = " + num.litLong);
-        System.out.println("максимальное значение по типу int = " + num.litInt);
-        System.out.println("максимальное значение по типу byte = " + num.litByte);
-        System.out.println("максимальное значение по типу short = " + num.litShort);
+        {
+            System.out.println("максимальное значение по типу long = " + num.litLong);
+            System.out.println("максимальное значение по типу int = " + num.litInt);
+            System.out.println("максимальное значение по типу byte = " + num.litByte);
+            System.out.println("максимальное значение по типу short = " + num.litShort);
 
-        short litshort = num.litByte;// ошибки не происходит, если значение литерала находится в диапазоне допустимых значений данного типа.
-        System.out.println("присваивается переменной типа short переменную типа byte = " + litshort);
+            short litshort = num.litByte;// ошибки не происходит, если значение литерала находится в диапазоне допустимых значений данного типа.
+            System.out.println("присваивается переменной типа short переменную типа byte = " + litshort);
 
-        byte litbyte = (byte) num.litInt;//если значение превосходит тип то нужно кастовать
-        System.out.println("преобразованное значение из int в byte = " + litbyte);//???????why -1
+            byte litbyte = (byte) num.litInt;//если значение превосходит тип то нужно кастовать
+            System.out.println("преобразованное значение из int в byte = " + litbyte);//???????why -1
 
-        System.out.println("111___222___333 = " + num.litIntUnderline2);
-        System.out.println("двоичное число в виде 0b1101_0101_0001_1010 = " + num.litIntUnderline3);
+            System.out.println("111___222___333 = " + num.litIntUnderline2);
+            System.out.println("двоичное число в виде 0b1101_0101_0001_1010 = " + num.litIntUnderline3);
+        }
 
         System.out.println("/------------------------/"); System.out.println();
         //----------------------------//
@@ -103,8 +112,10 @@ public class Main {
         /*---Литералы с плавающей точкой---*/
         System.out.println("Литералы с плавающей точкой:");
 
-        System.out.println("число с плавающей точкой в 2-ном порядке litdoublehex = 0x12.2p3 = 18.125*2^3 = " + num.litDoubleHex);
-        System.out.println("9_423_497.1_0_9 = " + num.litDoubleUnderline);
+        {
+            System.out.println("число с плавающей точкой в 2-ном порядке litdoublehex = 0x12.2p3 = 18.125*2^3 = " + num.litDoubleHex);
+            System.out.println("9_423_497.1_0_9 = " + num.litDoubleUnderline);
+        }
 
         System.out.println("/------------------------/"); System.out.println();
         //---------------------------------//
@@ -112,8 +123,10 @@ public class Main {
         /*---Логические литералы---*/
         System.out.println("Логические литералы:");
 
-        //num.litBoolean = false;
-        System.out.println(num.litBoolean);
+        {
+            //num.litBoolean = false;
+            System.out.println(num.litBoolean);
+        }
 
         System.out.println("/------------------------/"); System.out.println();
         //-------------------------//
@@ -121,9 +134,11 @@ public class Main {
         /*---Символьные литералы---*/
         System.out.println("Символьные литералы:");
 
-        System.out.println("символ 'a' в 8-ой форме (141) = " + num.litChar8A);
-        System.out.println("символ 'a' в 16-ой форме (u0061) = " + num.litChar16A);
-        System.out.println("символ кавычка = " + num.litCharQuotes);
+        {
+            System.out.println("символ 'a' в 8-ой форме (141) = " + num.litChar8A);
+            System.out.println("символ 'a' в 16-ой форме (u0061) = " + num.litChar16A);
+            System.out.println("символ кавычка = " + num.litCharQuotes);
+        }
 
         System.out.println("/------------------------/"); System.out.println();
         //-------------------------//
@@ -131,7 +146,9 @@ public class Main {
         /*---Строковые литералы---*/
         System.out.println("Строковые литералы:");
 
-        System.out.println("строковый литерал = " + num.litString);
+        {
+            System.out.println("строковый литерал = " + num.litString);
+        }
 
         System.out.println("/------------------------/"); System.out.println();
         //------------------------//
@@ -179,13 +196,15 @@ public class Main {
         /*---Видимость в цикле for---*/
         System.out.println("Видимость в цикле for:");
 
-        for(int x = 0; x < 2; x++){
-            int y = -1; // переменная у инициализируется при
-                        // каждом вхождении в блок кода
-            System.out.println("y равно: " + y);
-            // здесь всегда выводится значение -1
-            y = 100;
-            System. out. println ("у теперь равно: " + y);
+        {
+            for (int x = 0; x < 2; x++) {
+                int y = -1; // переменная у инициализируется при
+                // каждом вхождении в блок кода
+                System.out.println("y равно: " + y);
+                // здесь всегда выводится значение -1
+                y = 100;
+                System.out.println("у теперь равно: " + y);
+            }
         }
 
         System.out.println("/------------------------/"); System.out.println();
@@ -219,6 +238,51 @@ public class Main {
 
         System.out.println("/------------------------/"); System.out.println();
         //------------------------------------//
+
+        /*---Автоматическое продвижение типов в выражениях---*/
+        System.out.println("Автоматическое продвижение типов в выражениях:");
+
+        //Java тип каждого операнда byte, short или char автоматически продвигается к типу int.
+
+        {
+            byte a = 40;
+            byte b = 50;
+            byte c = 100;
+
+            int d = a * b / c;
+            // а * Ь вполне может выйти за пределы диапазона допустимых значений его операндов типа byte.
+            System.out.println("a * b / c = " + d);
+
+            b = (byte)(b * 2); //т.к byte автоматически продвигается к типу int нужно явно указывать тип
+            System.out.println("(byte)(b * 2) = " + b);
+        }
+
+        System.out.println("/------------------------/"); System.out.println();
+        //---------------------------------------------------//
+
+        /*---Правила продвижения типов---*/
+        System.out.println("Правила продвижения типов:");
+
+        {
+            byte b = 42;
+            char c = 'а';
+            short s = 1024;
+            int i = 50000;
+            float f = 5.67f;
+            double d = .1234;
+
+            double result = (f * b) + (i / c) - (d * s);
+
+            System.out.println( (f * b) + " + " + (i / c) + " - " + (d * s));
+            System.out.println("result = " + result);
+        }
+
+        System.out.println("/------------------------/"); System.out.println();
+        //-------------------------------//
+
+
+
+        //--------------------------------------------------------ШАБЛОНЫ-----------------------------------------------------------
 
         /*---шаблон---*/
         System.out.println("шаблон");
