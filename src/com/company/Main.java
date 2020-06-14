@@ -302,7 +302,8 @@ public class Main {
         //--------------------------------------------------------МАССИВЫ-----------------------------------------------------------
 
         /*---Одномерные массивы---*/
-        System.out.println("Одномерные массивы");
+        System.out.println("Одномерные массивы:");
+
         {
             num.arrayInt = new int[12];
 
@@ -338,8 +339,78 @@ public class Main {
             System.out.println("(10.1 + 11.2 + 12.3 + 13.4 + 14.5) / "+ nums.length + " = " + result / nums.length);
 
         }
+
         System.out.println("/------------------------/"); System.out.println();
         //------------------------//
+
+        /*---Многомерные массивы---*/
+        System.out.println("Многомерные массивы:");
+
+        {
+            // Демонстрация применения двухмерного массива
+            System.out.println("Демонстрация применения двухмерного массива, заданная размерность");
+
+            int k = 0;
+            for (int i = 0; i < num.arrayIntTwoDimensional.length; ++i) // количество строк в массиве
+            {
+                for (int j = 0; j < num.arrayIntTwoDimensional[i].length; ++j) // длинна каждого столбцоа в массиве
+                {
+                    num.arrayIntTwoDimensional[i][j] = k;
+                    System.out.print(num.arrayIntTwoDimensional[i][j] + "\t");
+                    k++;
+                }
+                System.out.println();
+            }
+            k = 0;
+
+            //динамическое обявление массива
+            System.out.println("динамическое обявление массива");
+
+            // При резервировании памяти под многомерный массив
+            // необходимо указать память только для первого (левого) измерения массива.
+            int twoD[][] = new int[5][];
+            twoD[0] = new int[4];
+            twoD[1] = new int[3];
+            twoD[2] = new int[5];
+            twoD[3] = new int[1];
+            twoD[4] = new int[6];
+
+            for (int i = 0; i < twoD.length; ++i) // twoD.length = количество всех строк в массиве
+            {
+                for (int j = 0; j < twoD[i].length; ++j) // twoD[i].length = длинне каждого столбцоа в массиве
+                {
+                    twoD[i][j] = k;
+                    System.out.print(twoD[i][j] + "\t");
+                    k++;
+                }
+                System.out.println();
+            }
+            k = 0;
+
+            // каждый элемент массива заполняется произведением его индексов, и эти произведения выводятся на экран.
+            System.out.println("кубический массив:");
+
+            //первй индекс отвечает за количество матриц, второй за количество строк в матрице, третий за количество столбцов в матрице
+            int threeD[][][] = new int[3][4][5];
+            for (int i = 0; i < threeD.length; ++i) // threeD.length = количество всех матриц
+            {
+                System.out.println("Матрица №" + (i + 1));
+                for (int j = 0; j < threeD[i].length; ++j) // threeD[i].length = количество всех строк в массиве
+                {
+                    for (k = 0; k < threeD[i][j].length; ++k) // threeD[i][j].length = длинне каждого столбцоа в массиве
+                    {
+                        threeD[i][j][k] = k * i * j;
+                        System.out.print(threeD[i][j][k] + "\t");
+                    }
+                    System.out.println();
+                }
+                System.out.println();
+            }
+            k = 0;
+        }
+
+        System.out.println("/------------------------/"); System.out.println();
+        //-------------------------//
 
 
         //--------------------------------------------------------ШАБЛОНЫ-----------------------------------------------------------
