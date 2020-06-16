@@ -1,5 +1,6 @@
 package com.company;
 import static com.company.Variables.*;
+import static com.company.Operations.*;
 
 public class Main {
 
@@ -412,7 +413,125 @@ public class Main {
         System.out.println("/------------------------/"); System.out.println();
         //-------------------------//
 
+        //--------------------------------------------------------ОПЕРАЦИИ-----------------------------------------------------------
 
+        /*---Арифметические операции---*/
+        System.out.println("Арифметические операции:");
+
+        {
+            // арифметические операции над
+            // целочисленными значениями
+            System.out.println("\nЦeлoчиcлeннaя арифметика:");
+
+            int a = 1 + 1;
+            int b = a * 3;
+            int c = b / 4;
+            int d = c - a;
+            int e = -d;
+
+            System.out.println("a = " + a);
+            System.out.println("b = " + b);
+            System.out.println("c = " + c);
+            System.out.println("d = " + d);
+            System.out.println("e = " + e);
+
+            // арифметические операции над значениями типа double
+            System.out.println("\nApифмeтикa с плавающей точкой:");
+
+            double da = 1 + 1;
+            double db = da * 3;
+            double dc = db / 4;
+            double dd = dc - da;
+            double de = -dd;
+
+            System.out.println("da = " + da);
+            System.out.println("db = " + db);
+            System.out.println("dc = " + dc);
+            System.out.println("dd = " + dd);
+            System.out.println("de = " + de);
+
+            System.out.println("\nОперация деления по модулю:");
+
+            // Операция деления по модулю % возвращает остаток от деления.
+            // Эту операцию можно выполнять как над числовыми типами данных с плавающей точкой,
+            // так и над целочисленным типами данных.
+
+            int x = 42;
+            double y = 42.25;
+            System.out.println("x mod 10 = "+ x % 10);
+            System.out.println("y mod 10 = "+ y % 10);
+
+            System.out.println("\nСоставные арифметические операции с присваиванием:");
+
+            //Пример применения нескольких операций с присваиванием
+
+            a = 1;
+            b = 2;
+            c = 3;
+
+            a += 5;
+            b *= 4;
+            c += a * b;
+            c %= 6;
+
+            System.out.println("a = " + a);
+            System.out.println("b = " + b);
+            System.out.println("c = " + c);
+
+
+        }
+
+        System.out.println("/------------------------/"); System.out.println();
+        //-----------------------------//
+
+        /*---Операции инкремента и декремента---*/
+        System.out.println("Операции инкремента и декремента:");
+
+        {
+            System.out.println("\nинкремент и декремент:");
+
+            System.out.print("(i = 0; i < 10; ++i) ->\t");
+            for (int i = 0; i < 10; ++i) // пример инкримента цикл for
+            {
+                System.out.print(i + "\t");
+            }
+            System.out.println();
+
+            System.out.print("(d= 20; d > 10; --b) ->\t");
+            int d = 20;
+            while(d > 10){
+                System.out.print(d + "\t");
+                --d;
+            }
+
+            System.out.println("\n\nпрефикс и постфикс:");
+
+            int x = 42;
+            int y = ++x;
+            System.out.println("(x = 42; y = ++x;) ->\t" + "x = " + x + " y = " + y);
+            System.out.println("(x = x + 1; y = x;) -> равносильно выражениям выше");
+            System.out.println("в этом случае певым действием производится префикс, а только потом присваивание\n");
+
+            x = 42;
+            y = x++;
+            System.out.println("(x = 42; y = x++;) ->\t" + "x = " + x + " y = " + y);
+            System.out.println("(y = x; x = x + 1;) -> равносильно выражениям выше");
+            System.out.println("в этом случае певым действием производится присваивание, а только потом постфикс");
+
+        }
+
+        System.out.println("/------------------------/"); System.out.println();
+        //---------------------------------//
+
+
+        /*
+        Операции
+        -Арифметические операции
+        -Операция деления по модулю
+        -Составные арифметические операции с присваиванием
+        -Операции инкремента и декремента
+        -Префикс и постфикс
+        */
         //--------------------------------------------------------ШАБЛОНЫ-----------------------------------------------------------
 
         /*---шаблон---*/
